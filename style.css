@@ -43,13 +43,14 @@ body{
     color: var(--color1);
     box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px -4px;
     cursor: pointer;
+    position: relative;
 }
 
 
 .page2{
     width: 100%;
     height: 100%;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -94,7 +95,17 @@ body{
     background-color: var(--color3);
     color: var(--color1);
     border: none;
+    position: relative;
 }
+body > div.page2.remove.active .squad  div  button  i{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    font-size: clamp(1vw,3vw,5vw);
+
+}
+
 .page2 .info .twos{
     width: 100%;
     display: flex;
@@ -113,22 +124,32 @@ body{
     gap: 3vw;
     position: relative;
 }
-.page3 .budget{
+.page3 .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.page3 .top .back,
+.page3 .top .budget{
     width: fit-content;
     font-size: clamp(1vw, 5vw, 10vw);
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 10px ;
     text-transform: capitalize;
     /* border: none; */
     border-radius: 5px;
     background-image: linear-gradient(to right, var(--color6) , var(--color5));
     color: var(--color2);
     box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px -4px;
-    align-self: flex-start;
-    margin-left: 5vw;
+    /* align-self: flex-start; */
+    /* margin-left: 5vw; */
+}
+.page3 .top .back{
+    font-size: clamp(1vw, 4vw, 10vw);
 }
 .page3 #selectedSquad{
-    height: 60dvh;
+    height: 90dvh;
     width: 100%;
         display: flex;
         justify-content: center;
@@ -179,11 +200,46 @@ body{
 .page3 .selected-squad .info button{
     font-size: clamp(1vw, 7vw, 10vw);
     font-weight: 700;
-    padding: clamp(.5vw, 3vw, 10vw) clamp(.5vw, 3vw, 10vw);
+    /* padding: clamp(.5vw, 3vw, 10vw) clamp(.5vw, 3vw, 10vw); */
     text-transform: uppercase;
-    background-color: var(--color3);
-    color: var(--color1);
+    background-image: linear-gradient(to bottom, var(--color3), var(--color4));
+    /* color: var(--color6); */
     border: none;
+    position: relative;
+    width: 25vw;
+    height: 25vw;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.page3 .selected-squad .info button img{
+    width: 75%;
+    height: 75%;
+}
+.page3 .selected-squad .info button p{
+    color: var(--color5);
+    font-size: clamp(1vw, 5vw, 30vw);
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+#selectedSquad  div  button > i{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%,-50%);
+    font-size: clamp(1vw,4vw,20vw);
+    color: var(--color2);
+    background-image: linear-gradient(to right, var(--color5), var(--color6));
+    width:  clamp(1vw,8vw,20vw);
+    height:  clamp(1vw,8vw,20vw);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .page3 .selected-squad .info .twos{
     width: 100%;
@@ -251,16 +307,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.page3 .selected-squad .info button img{
-    width: 25px;
-    height: 25px;
-}
-.page3 .selected-squad .info button p{
-    color: var(--color2);
-    font-size: clamp(1vw, 4vw, 30vw);
 
 }
+
 
 
 .page3 .players{
