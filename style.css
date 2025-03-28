@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1: #37003c ;
+    --color2: #fff ;
+    --color3: #00ff87 ;
+    --color4: #02efff ;
+    --color5: #43a0ff ;
+    --color6: #963cff ;
+}
+body{
+    width: 100%;
+    height: 100dvh;
+    background-image: url(bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(1px);
+    font-family: sans-serif;
+}
+
+.page1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* display: none; */
+}
+
+.page1 button{
+    font-size: clamp(1vw, 5vw, 10vw);
+    font-weight: bold;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--color3), var(--color4));
+    color: var(--color1);
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px -4px;
+    cursor: pointer;
+}
+
+
+.page2{
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vw;
+}
+.page2 .squad{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.17);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+.page2 .squad p{
+    color: var(--color1);
+    font-size: clamp(1vw, 4vw, 10vw);
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right, var(--color3), var(--color4));
+    border-radius: 3px;
+}
+.page2 .info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vw;
+}
+.page2 .info button{
+    font-size: clamp(1vw, 4vw, 10vw);
+    font-weight: 700;
+    padding: clamp(.5vw, 1vw, 10vw) clamp(.5vw, 3vw, 10vw);
+    text-transform: uppercase;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+}
+.page2 .info .twos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.page3{
+    width: 100%;
+    height: 100%;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3vw;
+    position: relative;
+}
+.page3 .budget{
+    width: fit-content;
+    font-size: clamp(1vw, 5vw, 10vw);
+    font-weight: bold;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    /* border: none; */
+    border-radius: 5px;
+    background-image: linear-gradient(to right, var(--color6) , var(--color5));
+    color: var(--color2);
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 1px 10px -4px;
+    align-self: flex-start;
+    margin-left: 5vw;
+}
+.page3 #selectedSquad{
+    height: 60dvh;
+    width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+}
+
+.page3 .selected-squad{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page3 .selected-squad .squad{
+    width: 90vw;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0px;
+    /* border-radius: 5px; */
+    /* background: rgba(255, 255, 255, 0.17);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
+    }
+.page3 .selected-squad >  p{
+    width: fit-content;
+    color: var(--color1);
+    font-size: clamp(1vw, 5vw, 10vw);
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: clamp(1vw, 3vw, 10vw) clamp(1vw, 5vw, 5vw);
+    background-image: linear-gradient(to right, var(--color3), var(--color4));
+    border-radius: 3px;
+}
+.page3 .selected-squad .info{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.page3 .selected-squad .info button{
+    font-size: clamp(1vw, 7vw, 10vw);
+    font-weight: 700;
+    padding: clamp(.5vw, 3vw, 10vw) clamp(.5vw, 3vw, 10vw);
+    text-transform: uppercase;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+}
+.page3 .selected-squad .info .twos{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.page3 > span{
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    background: var(--color1);
+}
+.page3 > span i{
+    font-size: clamp(1rem, 6vw, 4rem);
+    color: var(--color3);
+}
+
+
+
+
+.page3 .subs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 20dvh;
+}
+.page3 .subs p{
+    text-align: start;
+    width: 100%;
+    -webkit-text-stroke: .5px var(--color6);
+    text-transform: capitalize;
+    color: var(--color2);
+    font-size: clamp(1vw, 7vw, 4rem);
+    font-weight: 800;
+}
+.page3 .subs .sub{
+    width: 100% ;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.page3 .subs .sub button{
+    width: 25%;
+    height: 75%;
+    font-size: clamp(1vw, 15vw, 30vw);
+    font-weight: 700;
+    padding: clamp(.5vw, 1vw, 10vw) clamp(.5vw, 3vw, 10vw);
+    text-transform: uppercase;
+    background-color: var(--color3);
+    color: var(--color1);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page3 .selected-squad .info button img{
+    width: 25px;
+    height: 25px;
+}
+.page3 .selected-squad .info button p{
+    color: var(--color2);
+    font-size: clamp(1vw, 4vw, 30vw);
+
+}
+
+
+.page3 .players{
+    /* display: none; */
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90dvh;
+    background-color: var(--color2);
+    z-index: 3;
+}
+.page3 .players2{
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    padding-top: 15dvh;
+
+}
+
+.page3 .players .top,
+.page3 .players .player{
+    width: 100%;
+    height: 15dvh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.page3 .players .player{
+    border-bottom: 2px solid var(--color1);
+}
+.page3 .players .top{
+    background: var(--color1);
+    position: fixed;
+    top: 0;
+
+}
+
+.page3 .players .player img{
+    width: 25%;
+    height: 100%;
+    object-fit: contain;
+}
+.page3 .players .top p,
+.page3 .players .player p{
+    font-size: clamp(1vw,5vw,8vw);
+    color: var(--color5);
+    text-transform: capitalize;
+    width: 25%;
+    text-align: center;
+}
+.page3 .players .top p{
+    color: var(--color4);
+}
+/* .page3 .players .player .team */
+/* .page3 .players .player .price */
+.remove {
+    display: none;
+}
+.active {
+    display: flex;
+}
